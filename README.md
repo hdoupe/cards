@@ -2,14 +2,34 @@
 
 The rules for the top hands can be found [here](https://www.cardplayer.com/rules-of-poker/hand-rankings).
 
-Run the script:
+
+### Example usage
+
+```python
+In [1]: import cards 
+   ...: i = 0 
+   ...: while True: 
+   ...:     i += 1 
+   ...:     hand = cards.gen_cards() 
+   ...:     res = cards.choose_cards(hand) 
+   ...:     if res and res[0] in ("straight", "flush", "straight_flush", "royal_flush"): 
+   ...:         break 
+   ...:                                                                                                                                                                                       
+
+In [2]: i                                                                                                                                                                                     
+Out[2]: 3
+
+In [3]: res                                                                                                                                                                                   
+Out[3]: 
+('flush',
+ [('spades', 10), ('spades', 8), ('spades', 6), ('spades', 3), ('spades', 2)])
 
 ```
-$ python cards.py 
-('royal_flush', [('diamonds', 'Jack'), ('diamonds', 'Queen'), ('diamonds', 'Ace'), ('diamonds', 10), ('diamonds', 'King')])
-('straight', [('hearts', 'Ace'), ('clubs', 'Ace'), ('diamonds', 'King'), ('diamonds', 'Queen'), ('diamonds', 'Jack'), ('diamonds', 10), ('spades', 2)])
-('straight_flush', [('diamonds', 'King'), ('diamonds', 'Queen'), ('diamonds', 'Jack'), ('diamonds', 10), ('diamonds', 9)])
-('straight_flush', [('diamonds', 'King'), ('diamonds', 'Queen'), ('diamonds', 'Jack'), ('diamonds', 10), ('diamonds', 9), ('diamonds', 8)])
+
+### Run tests
+
+```
+$ py.test test.py -v
 ```
 
 Possible TODOs:
