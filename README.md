@@ -33,6 +33,6 @@ $ py.test test.py -v
 ```
 
 Possible TODOs:
-- [ ] Fix the logic for finding a flush. This incorrectly returns royal flushes sometimes.
+- [x] Fix the logic for finding a flush. This incorrectly returns royal flushes sometimes.
 - [ ] Write a CLI
 - [ ] Score more of the hands in the poker hand ranking website linked to above.
